@@ -38,7 +38,7 @@ function App() {
               }
             />
             <Route path="/quiz" element={<Quiz name={name} questions={question} score={score} setScore={setScore} setQuestion={setQuestion}/>} />
-            <Route path="/result" element={<Result />} />
+            <Route path="/result" element={<Result name={name} score={score} />} />
           </Routes>
         </main>
         {/* <Footer /> */}

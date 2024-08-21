@@ -1,22 +1,19 @@
 .title {
+   text-transform: uppercase;
+   font-size: xx-large;
+   font-family: "Montserrat", sans-serif;
+   cursor: pointer;
+   offset: 5px;
+ }
+ 
+ .header {
    display: flex;
    flex-direction: column;
    align-items: center;
-   padding: 10px;
+ }
+ 
+ .divider {
+   margin: 10px;
    width: 100%;
-
-}
-.innertitle {
-   text-transform: uppercase;
-   font-size: 25px;
-   cursor: pointer;
-   color: #212121;
-   text-align: center; 
-    
-}
-
-.divider {
-    margin: 10px;
-    width: 100%;
-    background-color: #9e9e9e;
-}
+   background-color: grey;
+ }
