@@ -49,31 +49,35 @@ function Question({
   };
 
   return (
-    <div className="question">
-      <h1>Question {currentQ + 1}</h1>
-      <div className="singleQ">
-        <h2>{questions[currentQ].question}</h2>
-        <div className="options">
-          {error && <h4>{error}</h4>}
-          {options &&
-            options.map((op) => (
-              <button
-                onClick={() => handleCheck(op)}
-                className={`singleOption ${selected && handleSelected(op)}`}
-                key={op}
-                disabled={!!selected}
-              >
-                {op}
-              </button>
-            ))}
-        </div>
-        <div className="controls">
-          <button onClick={handleQuit}>Quit</button>
-          <button onClick={handleNext}>Next Question</button>
+    
+      <div className="question">
+        {/* <span className="subtitle">Welcome, {name}</span> Centered here */}
+        <h1>Question {currentQ + 1}</h1>
+        <div className="singleQ">
+          <h2>{questions[currentQ].question}</h2>
+          <div className="options">
+            {error && <h4>{error}</h4>}
+            {options &&
+              options.map((op) => (
+                <button
+                  onClick={() => handleCheck(op)}
+                  className={`singleOption ${selected && handleSelected(op)}`}
+                  key={op}
+                  disabled={!!selected}
+                >
+                  {op}
+                </button>
+              ))}
+          </div>
+          <div className="controls">
+            <button className="btn1" onClick={handleQuit}>Quit</button>
+            <button className="btn2" onClick={handleNext}>Next Question</button>
+          </div>
         </div>
       </div>
-    </div>
-  );
+    );
+    
+  
 }
 
 export default Question;

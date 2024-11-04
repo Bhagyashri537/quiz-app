@@ -17,34 +17,35 @@ function Quiz({ name, score, questions, setQuestion, setScore }) {
     );
   }, [questions, currentQ]);
 
-  //console.log(options);
-
   const handleShuffle = (options) => {
     return options.sort(() => Math.random() - 0.5);
   };
+
   return (
     <div className="quiz">
-      <span className="subtitle">Welcome, {name}</span>
-      {questions ? (
-        <>
-          <div className="quizInfo">
-            <span>{questions[currentQ].category}</span>
-            <span>Score:{score}</span>
-          </div>
-          <Question
-            currentQ={currentQ}
-            setCurrentQ={setCurrentQ}
-            options={options}
-            questions={questions}
-            setQuestion={setQuestion}
-            correct={questions[currentQ]?.correct_answer}
-            score={score}
-            setScore={setScore}
-          />
-        </>
-      ) : (
-        <h3>loading...</h3>
-      )}
+      <div className="quizContent"> {/* New wrapper for content */}
+        <span className="subtitle">Welcome, {name}</span>
+        {questions ? (
+          <>
+            <div className="quizInfo">
+              <span>{questions[currentQ].category}</span>
+              <span>Score: {score}</span>
+            </div>
+            <Question
+              currentQ={currentQ}
+              setCurrentQ={setCurrentQ}
+              options={options}
+              questions={questions}
+              setQuestion={setQuestion}
+              correct={questions[currentQ]?.correct_answer}
+              score={score}
+              setScore={setScore}
+            />
+          </>
+        ) : (
+          <h3>Loading...</h3>
+        )}
+      </div>
     </div>
   );
 }

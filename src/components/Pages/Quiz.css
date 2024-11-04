@@ -2,20 +2,50 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-family: sans-serif;
+    justify-content: center; 
+    font-family: 'Arial', sans-serif; 
+    height: 100vh; 
+    background-color: #e8e1ee; 
+    padding: 20px; 
+    box-sizing: border-box; 
+}
+
+.quizContent {
+    background-color: rgb(255, 255, 255); 
+    border-radius: 10px; 
+    padding: 20px; 
+    max-width: 1200px; 
+    height: min-content;
+    width: 100%; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+   
 }
 
 .subtitle {
-    font-size: 25px;
-    border: 1px solid black;
-    box-shadow: 4px 4px 2px black;
-    padding: 5px 10px;
+    font-size: 28px; 
+    color: #333; 
+    
+    text-align: center; 
+    margin-bottom: 20px; 
+    width: 100%; 
 }
 
 .quizInfo {
-    width:100%;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     text-transform: uppercase;
-    margin-block-end: 30px;
+    margin-bottom: 20px; 
+    font-weight: bold; 
+    color: #555; 
+}
+
+.quizInfo span {
+    padding: 5px 10px; 
+    background-color: #f0f0f0; 
+    border-radius: 4px; 
 }

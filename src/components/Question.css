@@ -1,61 +1,122 @@
 .question {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .singleQ {
-    width: 95%;
-    min-height: 350px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    border: 5px solid gray;
-    padding: 20px;
-    margin-top: 10px;
-  }
-  
-  .options {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    flex: 1;
-    align-items: center;
-    justify-content: space-around;
-    margin: 10px;
-  }
-  
-  .singleOption {
-    width: 46%;
-    height: 50px;
-    padding: 15px 20px;
-    margin: 10px;
-    box-shadow: 0 0 2px black;
-    cursor: pointer;
-  }
-  
-  @media (max-width: 614px) {
-    .singleOption {
-      width: 100%;
-    }
-  }
-  
-  .select {
-    background-color: green;
-    color: white;
-    box-shadow: 0 0 1px black;
-  }
-  
-  .wrong {
-    background-color: red;
-    color: white;
-    box-shadow: 0 0 1px black;
-  }
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center items in the flex container */
+}
 
-  .controls{
-    display: flex;
-    width: 100%;
-    justify-content: space-around;
+.subtitle {
+  font-size: 28px; /* Slightly larger font size */
+  color: #333; /* Dark text color for readability */
+  padding: 10px; /* Padding for the subtitle */
+  text-align: center; /* Center align text */
+  margin-bottom: 20px; /* Space below the subtitle */
+  width: 100%; /* Ensure it takes full width */
+}
+
+.singleQ {
+  width: 95%;
+  min-height: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  border: 5px solid gray;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+.options {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+  align-items: center;
+  justify-content: space-around;
+  margin: 10px;
+  
+}
+
+.singleOption {
+  width: 46%;
+  height: 50px;
+  padding: 15px 20px;
+  margin: 10px;
+  border-radius: 8px; 
+  background-color: #9e9999; 
+  color: #333; 
+  cursor: pointer;
+  font-size: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  cursor: pointer;
+  font-size: 18px; 
+  font-weight: 500; 
+  text-align: center; 
+  transition: all 0.3s ease; 
+  border: 1px solid transparent;
+  
+}
+
+.singleOption:hover {
+  background-color: #e0e0e0; 
+  transform: scale(1.05); 
+  border-color: #007bff; 
+}
+
+
+@media (max-width: 614px) {
+  .singleOption {
+      width: 100%;
   }
+}
+
+.select {
+  background-color: green;
+  color: white;
+  box-shadow: 0 0 1px black;
+}
+
+.wrong {
+  background-color: red;
+  color: white;
+  box-shadow: 0 0 1px black;
+}
+
+.controls {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.btn1{
+  padding: 12px 20px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+  background-color: #dc3545;
+} 
+
+.btn1:hover {
+  background-color: #c82333;
+}  
+
+.btn2{
+  padding: 12px 20px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+  background-color: #007bff
+} 
+
+.btn2:hover {
+  background-color:#0056b3;
+}
+

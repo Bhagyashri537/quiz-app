@@ -1,72 +1,118 @@
 
 
 .content {
+  
+  
     display: flex;
     justify-content: space-around;
-}
-
-.title {
+    align-items: center;
+    height: 80vh; 
+    padding: 20px;
+    background-color: #f9f9f9;
+    
+      min-height: calc(100vh - 120px); 
+     
+      background-color: #f9f9f9;
+      box-sizing: border-box;
+      overflow: hidden;
+    }
+    
+ 
+  
+  .title {
     width: 45%;
-    padding: 10px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-family:  sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-weight: 300;
-
-}
-
-.img {
-    width: 55%;
-    align-self: center;
-    padding: 8px;
-}
-
-@media (max-width : 800px){
+    text-align: center;
+  }
+  
+  .title span {
+    font-size: 36px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .img {
+    width: 50%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  @media (max-width: 800px) {
     .content {
-        flex-direction: column-reverse;
-        align-items: center;
+      flex-direction: column-reverse;
+      align-items: center;
     }
-
-    .img{
-        width: 85%;
-        padding: 0;
-        padding-top: 20px;
-
+  
+    .img {
+      width: 85%;
+      padding: 0;
+      padding-top: 20px;
     }
-
-    .title{
-        width: 100%;
+  
+    .title {
+      width: 100%;
     }
-
-    
-}
-
-.settings {
+  }
+  
+  .settings {
     display: flex;
     flex-direction: column;
     padding: 20px;
     width: 100%;
-    flex:0.8;
+    max-width: 400px;
     justify-content: space-evenly;
-    
-}
-
-.inputfield{
-    padding: 20px;
-    border-radius: 2px;
-}
-
-#options{
-    padding: 20px;
-    border-radius: 2px; 
-}
-
-.btn {
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+  
+  .inputfield,
+  .category {
     padding: 15px;
-    border-radius: 2px;
-    background-color: blue;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+  }
+  
+  .inputfield:focus,
+  .category:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  }
+  
+  .btn {
+    padding: 15px;
+    border-radius: 6px;
+    background-color: #007bff;
     color: white;
     cursor: pointer;
-    font: 600;
-}
+    font-weight: 600;
+    text-transform: uppercase;
+    border: none;
+    transition: all 0.3s ease;
+    text-align: center;
+  }
+  
+  .btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .error {
+    color: red;
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  
